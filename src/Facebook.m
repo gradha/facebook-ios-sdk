@@ -191,7 +191,7 @@ static NSString* kSDKVersion = @"2";
   // her credentials in order to authorize the application.
   BOOL didOpenOtherApp = NO;
   UIDevice *device = [UIDevice currentDevice];
-  if ([device respondsToSelector:@selector(isMultitaskingSupported)] && [device isMultitaskingSupported]) {
+  if (NO && [device respondsToSelector:@selector(isMultitaskingSupported)] && [device isMultitaskingSupported]) {
     if (tryFBAppAuth) {
       NSString *scheme = kFBAppAuthURLScheme;
       if (_urlSchemeSuffix) {
